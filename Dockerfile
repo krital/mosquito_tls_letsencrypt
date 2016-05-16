@@ -18,5 +18,5 @@ RUN chown -R mosquitto /etc/mosquitto
 USER mosquitto
 RUN git clone https://github.com/certbot/certbot
 WORKDIR /etc/mosquitto/certbot
-RUN ./certbot-auto --help
+RUN ./certbot certonly --standalone -d example.com -d www.example.com
 
