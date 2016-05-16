@@ -21,3 +21,4 @@ WORKDIR /etc/mosquitto/certbot
 USER root
 RUN ./certbot certonly --standalone -d example.com -d www.example.com
 USER mosquitto
+RUN printenv
