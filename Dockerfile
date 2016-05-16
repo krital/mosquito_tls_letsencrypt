@@ -13,7 +13,7 @@ RUN echo 'root:Mosquitto!' | chpasswd
 
 RUN mkdir -p /etc/mosquitto
 WORKDIR /etc/mosquitto
-RUN chown -R mosquitto /etc/mosquitto
+#RUN chown -R mosquitto /etc/mosquitto
 #RUN wget https://letsencrypt.org/certs/isrgrootx1.pem
 #USER mosquitto
 RUN git clone https://github.com/certbot/certbot
