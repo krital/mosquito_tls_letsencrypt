@@ -15,10 +15,10 @@ RUN mkdir -p /etc/mosquitto
 WORKDIR /etc/mosquitto
 RUN chown -R mosquitto /etc/mosquitto
 #RUN wget https://letsencrypt.org/certs/isrgrootx1.pem
-USER mosquitto
+#USER mosquitto
 RUN git clone https://github.com/certbot/certbot
 WORKDIR /etc/mosquitto/certbot
-USER root
+#USER root
 RUN sudo ./certbot certonly --standalone -d example.com -d www.example.com
-#USER mosquitto
-#RUN printenv
+USER mosquitto
+RUN printenv
