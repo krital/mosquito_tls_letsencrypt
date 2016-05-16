@@ -2,6 +2,8 @@ FROM ansi/mosquitto
 
 MAINTAINER Alex Kritikos <alex@kritikal.org>
 
+RUN echo "root:Mosquitto!" | chpasswd
+
 USER root
 RUN sudo apt-get update
 RUN sudo apt-get upgrade -y
