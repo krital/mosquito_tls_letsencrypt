@@ -8,7 +8,7 @@ USER root
 
 RUN sudo apt-get update
 RUN sudo apt-get upgrade -y
-RUN apt-get install openssl git  -y
+RUN apt-get install openssl git augeas-lenses dialog libaugeas0 libexpat1-dev libffi-dev libpython-dev libpython2.7 libpython2.7-dev python-dev python-pkg-resources python-setuptools python-virtualenv python2.7-dev  -y
 RUN echo 'root:Mosquitto!' | chpasswd
 
 RUN mkdir -p /etc/mosquitto
