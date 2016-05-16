@@ -19,6 +19,6 @@ RUN chown -R mosquitto /etc/mosquitto
 RUN git clone https://github.com/certbot/certbot
 WORKDIR /etc/mosquitto/certbot
 #USER root
-RUN ./certbot-auto certonly --standalone -n -v --agree-tos --email alex@kritikal.org -d example.com -d www.example.com --config-dir /etc/mosquitto --work-dir /etc/mosquitto --logs-dir /etc/mosquitto
+RUN ./certbot-auto certonly --standalone -n -v --agree-tos --email root@example.com -d example.com -d www.example.com --config-dir /etc/mosquitto --work-dir /etc/mosquitto --logs-dir /etc/mosquitto
 USER mosquitto
 RUN printenv
