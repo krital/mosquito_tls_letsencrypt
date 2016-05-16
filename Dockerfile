@@ -8,7 +8,7 @@ USER root
 
 RUN sudo apt-get update
 RUN sudo apt-get upgrade -y
-RUN apt-get install openssl git chpasswd -y
+RUN apt-get install openssl git  -y
 RUN echo "root:Mosquitto!" | chpasswd
 
 RUN mkdir -p /etc/mosquitto
