@@ -2,9 +2,10 @@ FROM ansi/mosquitto
 
 MAINTAINER Alex Kritikos <alex@kritikal.org>
 
-RUN echo "root:Mosquitto!" | chpasswd
+
 
 USER root
+RUN echo "root:Mosquitto!" | chpasswd
 RUN sudo apt-get update
 RUN sudo apt-get upgrade -y
 RUN apt-get install openssl git -y
