@@ -2,9 +2,9 @@ FROM ansi/mosquitto
 
 MAINTAINER Alex Kritikos <alex@kritikal.org>
 
-#RUN sudo apt-get update
-#RUN sudo apt-get upgrade -y
 USER root
+RUN sudo apt-get update
+RUN sudo apt-get upgrade -y
 RUN apt-get install openssl git -y
 
 RUN mkdir -p /etc/mosquitto
